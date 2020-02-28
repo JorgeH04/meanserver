@@ -3,7 +3,6 @@ const path = require('path');
 const morgan = require('morgan');
 const express = require('express');
 const mongoose = require('mongoose');
-const engine  = require('ejs-mate');
 const cors = require('cors');
 const app = express();
 
@@ -17,8 +16,7 @@ require('./database');
 //settings
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
-app.engine('ejs', engine);
-app.set('view engine', 'ejs');
+
 
 //middlewares
 app.use(morgan('dev'));
@@ -30,7 +28,7 @@ app.use(cors({origin: 'http://localhost:4200'}));
 app.use(express.static(path.join(__dirname, 'views')));
 
 
-const routes = require('./routes/player.routes');
+app.use(require('./routes/playerroutes'));
 
   
 // Starting the server
