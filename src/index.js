@@ -27,7 +27,7 @@ app.set('views', path.join(__dirname, 'views'));
 //app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
-app.use(cors({origin: 'http://localhost:4200'}));
+app.use(cors({origin: 'https://silly-mirzakhani-ec1845.netlify.com'}));
 
 // static files
 app.use(express.static(path.join(__dirname, 'views')));
