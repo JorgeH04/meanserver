@@ -1,6 +1,6 @@
 
 const path = require('path');
-const morgan = require('morgan');
+//const morgan = require('morgan');
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -19,7 +19,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 
 //middlewares
-app.use(morgan('dev'));
+//app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use(cors({origin: 'http://localhost:4200'}));
