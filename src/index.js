@@ -27,7 +27,7 @@ app.set('views', path.join(__dirname, 'views'));
 //app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
-app.use(cors({origin: 'https://dreamy-tereshkova-c7e859.netlify.com/'}));
+app.use(cors({origin: 'https://dreamy-tereshkova-c7e859.netlify.com'}));
 
 // static files
 app.use(express.static(path.join(__dirname, 'views')));
